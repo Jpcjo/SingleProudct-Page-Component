@@ -31,6 +31,7 @@ const SmallImgIcons = () => {
               autoPlay
               muted
               loop
+              playsInline
               className={`cursor-pointer rounded-md mb-2 bg-gray-100 max-w-full max-h-full ${
                 currentImageIndex === index
                   ? "opacity-40 filter duration-300 ease-in-out border border-gray-500"

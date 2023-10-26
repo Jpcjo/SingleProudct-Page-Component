@@ -159,7 +159,7 @@ const Review = () => {
             <input
               type="search"
               placeholder="Search..."
-              className="px-3 py-2 bg-gray-100  w-[300px] h-[40px] focus:outline-none   focus:ring-gray-700"
+              className="px-3 py-2 bg-gray-100 w-[200px] sm:w-[300px] h-[40px] focus:outline-none   focus:ring-gray-700"
               value={searchQuery}
               // style={{
               //   appearance: "none",
@@ -172,17 +172,17 @@ const Review = () => {
             {searchExecuted === false ? (
               <button
                 type="submit"
-                className=" w-[30px] h-[40px] bg-gray-100 text-black  "
+                className=" w-[30px] h-[40px] bg-none pl-2 sm:bg-gray-100 text-black  "
                 onClick={handleSearchButtonClick}
               >
-                <IoSearchOutline className="w-6 h-6  hover:scale-125 duration-300" />
+                <IoSearchOutline className="w-6 h-6 pr-2 hover:scale-150 duration-300" />
               </button>
             ) : (
               <button
                 onClick={handleReset}
-                className="w-[30px] h-[40px] bg-gray-100 font-semibold  underline text-md  text-gray-400"
+                className="w-[30px] h-[40px] bg-none pl-2 sm:bg-gray-100 font-semibold  underline text-md  text-gray-400"
               >
-                <IoClose className="w-6 h-6 hover:scale-110 duration-300 hover:text-gray-600" />
+                <IoClose className="w-6 h-6 pr-2 hover:scale-150 duration-300 hover:text-gray-600" />
               </button>
             )}
           </form>

@@ -3,10 +3,10 @@ import { TbCircleDotFilled } from "react-icons/tb";
 
 const ReviewLanding = () => {
   return (
-    <section className="grid place-items-center bg-gray-100">
-      <h3 className="text-2xl font-bold mt-12 md:text-4xl md:mt-20 text-center">
+    <section className="grid place-items-center max-w-[100%] bg-gray-100">
+      <p className="text-base sm:text-2xl font-bold mt-12 md:text-4xl md:mt-20 text-center">
         Women's Wool Loungers Reviews
-      </h3>
+      </p>
       <div className="flex items-center mt-6">
         <p className="text-5xl font-bold">4.7</p>
         <div className="rating rating-md rating-half">
@@ -65,7 +65,7 @@ const ReviewLanding = () => {
         </div>
       </div>
       <p className="text-gray-500 mt-2">12 Reviews</p>
-      <div className="relative w-[420px] h-[120px] mx-auto bg-white mt-8 mb-4 py-4 px-8 text-center">
+      <div className="relative w-[280px] sm:w-[420px] h-[120px] mx-auto bg-white mt-8 mb-4 py-4 px-8 text-center">
         <p className="font-semibold text-2xl border-b-2 pb-4 border-gray-300">
           Size
         </p>
@@ -73,7 +73,7 @@ const ReviewLanding = () => {
         <p className="text-gray-300 absolute top-[42.5%] right-[30px]">|</p>
         <p className="text-gray-300 absolute top-[42.5%] right-[50%]">|</p>
         <TbCircleDotFilled className="w-5 h-5 absolute top-[45.5%] right-[50%] translate-x-[50%]" />
-        <div className="flex justify-between mt-4 text-gray-600 text-sm">
+        <div className="flex justify-between mt-4 text-gray-600 text-xs sm:text-sm">
           <p>Runs Small</p>
           <p>True To Size</p>
           <p>Runs Large</p>

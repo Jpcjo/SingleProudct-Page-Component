@@ -41,7 +41,7 @@ const TopSlide = () => {
   return (
     <div className="relative w-screen  h-12 bg-black text-white overflow-hidden font-semibold uppercase ">
       <div
-        className="absolute top-0 left-0 w-full h-12 flex text-sm transition-transform"
+        className="text-xs absolute top-0 left-0 w-full h-12 flex md:text-sm transition-transform"
         style={{
           transform: `translateX(-${currentSlide * 100}%)`,
           transition: "transform 1s ease-in-out",

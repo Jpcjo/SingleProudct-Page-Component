@@ -127,8 +127,8 @@ const LeftSliders = () => {
                     //   display: currentImageIndex === index ? "block" : "none",
                     // }}
                     style={imageStyle}
-                    autoPlay
                     playsInline
+                    autoPlay
                     muted
                     loop
                     className="cursor-pointer  object-cover rounded-xl mb-2 bg-gray-100 max-w-full max-h-full"
