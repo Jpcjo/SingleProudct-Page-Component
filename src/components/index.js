@@ -1,0 +1,11 @@
+export { default as LeftSliders } from "./LeftSliders";
+export { default as RightProductDetails } from "./RightProductDetails";
+export { default as TopSlide } from "./TopSlide";
+export { default as TopTitle } from "./TopTitle";
+export { default as SmallImgIcons } from "./SmallImgIcons";
+export { default as ProductCardsSlide } from "./ProductCardsSlide";
+export { default as ProductCard } from "./ProductCard";
+export { default as QA } from "./QA";
+export { default as InfoSection } from "./InfoSection";
+export { default as Review } from "./Review";
+export { default as ReviewLanding } from "./ReviewLanding";
