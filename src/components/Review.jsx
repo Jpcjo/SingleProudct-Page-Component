@@ -11,6 +11,7 @@ const ReviewsPerPage = 3;
 const Review = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isCurrentPageClicked, setIsCurrentPageClicked] = useState(false);
+  console.log(isCurrentPageClicked);
   const [searchQuery, setSearchQuery] = useState("");
   //   console.log(searchQuery);
   const [filteredReviews, setFilteredReviews] = useState([]);
@@ -124,7 +125,8 @@ const Review = () => {
 
   useEffect(() => {
     if (
-      (currentPage >= 1 && isCurrentPageClicked === true) ||
+      isCurrentPageClicked === true ||
+      currentPage > 1 ||
       searchExecuted ||
       sortChangeInvoked ||
       isSearchButtonClickInvoked
@@ -143,6 +145,7 @@ const Review = () => {
     searchExecuted,
     sortChangeInvoked,
     isSearchButtonClickInvoked,
+    isCurrentPageClicked,
   ]);
 
   useEffect(() => {
@@ -269,7 +272,7 @@ const Review = () => {
           <button
             onClick={() => {
               handlePrevious();
-              scrollToTopOfReviews();
+              // scrollToTopOfReviews();
             }}
             disabled={currentPage === 1}
             className="mr-2 px-4 py-2 hover:scale-1 duration-300"
@@ -281,7 +284,7 @@ const Review = () => {
               key={index}
               onClick={() => {
                 setCurrentPage(index + 1);
-                scrollToTopOfReviews();
+                // scrollToTopOfReviews();
                 setIsCurrentPageClicked(true);
               }}
               className={`px-3 py-2 hover:scale-150 duration-300 ${
@@ -294,7 +297,7 @@ const Review = () => {
           <button
             onClick={() => {
               handleNext();
-              scrollToTopOfReviews();
+              // scrollToTopOfReviews();
             }}
             disabled={currentPage === totalPages}
             className="ml-2 px-4 py-2 hover:scale-150 duration-300 "
