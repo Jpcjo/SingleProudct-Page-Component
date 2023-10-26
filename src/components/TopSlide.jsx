@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const texts = [
-  "Wool Loungers Are The Most Comfortable. Ever.",
+  "Wool Loungers. Walk on clouds.",
   "Free Delivery On Orders Over $100.",
   "absolutely. free returns.",
   "Introducing AfterPay. Shop now. Pay Late.",
@@ -41,7 +41,7 @@ const TopSlide = () => {
   return (
     <div className="relative w-screen  h-12 bg-black text-white overflow-hidden font-semibold uppercase ">
       <div
-        className="text-xs absolute top-0 left-0 w-full h-12 flex md:text-sm transition-transform"
+        className="text-xs absolute w-full top-0 left-0 h-12 flex md:text-sm transition-transform"
         style={{
           transform: `translateX(-${currentSlide * 100}%)`,
           transition: "transform 1s ease-in-out",

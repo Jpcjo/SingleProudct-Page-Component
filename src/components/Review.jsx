@@ -10,6 +10,7 @@ const ReviewsPerPage = 3;
 
 const Review = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isCurrentPageClicked, setIsCurrentPageClicked] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   //   console.log(searchQuery);
   const [filteredReviews, setFilteredReviews] = useState([]);
@@ -123,7 +124,7 @@ const Review = () => {
 
   useEffect(() => {
     if (
-      currentPage >= 1 ||
+      (currentPage >= 1 && isCurrentPageClicked === true) ||
       searchExecuted ||
       sortChangeInvoked ||
       isSearchButtonClickInvoked
@@ -281,6 +282,7 @@ const Review = () => {
               onClick={() => {
                 setCurrentPage(index + 1);
                 scrollToTopOfReviews();
+                setIsCurrentPageClicked(true);
               }}
               className={`px-3 py-2 hover:scale-150 duration-300 ${
                 currentPage === index + 1 ? "text-black" : "text-gray-300"
