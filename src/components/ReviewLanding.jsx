@@ -3,7 +3,7 @@ import { TbCircleDotFilled } from "react-icons/tb";
 
 const ReviewLanding = () => {
   return (
-    <section className="grid place-items-center max-w-[100%] bg-gray-100">
+    <section className="flex flex-col place-items-center max-w-[100%] bg-gray-100">
       <p className="text-base sm:text-2xl font-bold mt-12 md:text-4xl md:mt-20 text-center">
         Women's Wool Loungers Reviews
       </p>
