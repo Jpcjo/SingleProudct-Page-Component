@@ -4,9 +4,6 @@ import { RiArrowDownSLine } from "react-icons/ri";
 import { infoSection3 } from "../utilis/productsArray";
 
 const Accordion = () => {
-  //   const test = useRef(null);
-  //   console.log(test.current);
-
   const [accordions, setAccordions] = useState([false, false, false, false]);
   const [contentHeights, setContentHeights] = useState(
     Array(QNA.length).fill(0)

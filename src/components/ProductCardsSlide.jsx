@@ -9,22 +9,18 @@ const ProductCardsSlide = () => {
   const [cardsToShow, setCardsToShow] = useState(2);
   const [changeImage, setChangeImage] = useState(firstImage);
   const [hoveredCard, setHoveredCard] = useState(-1); // Initialize with -1 indicating no card is hovered
-
   const [clickImageId, setClickImageId] = useState(null);
   const [selectImage, setSelectImage] = useState(null);
   const [cardIndex, setCardIndex] = useState(-1);
-  //   console.log(selectImage);
   const [image01, setImage01] = useState(null);
   const [didClick, setDidClick] = useState(false);
   const [smallIndex, setSmallIndex] = useState(-1);
 
   const [selectedImages, setSelectedImages] = useState({});
-  //   console.log(selectedImages);
   const [hasScreenSizeChanged, setHasScreenSizeChanged] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [productName, setProductName] = useState(null);
   const [selectProductName, setSelectProductName] = useState({});
-  // console.log(selectProductName);
 
   const testRef = useRef(null);
 
@@ -86,10 +82,6 @@ const ProductCardsSlide = () => {
       [cardIndex]: image01,
     }));
 
-    // console.log(
-    //   `Clicked image with ID ${Id} on card ${cardIndex} and
-    //   name ${image01}, did click ${didClick}, small Index ${smallIndex} `
-    // );
     setSelectProductName((prevName) => ({
       ...prevName,
       [cardIndex]: shoesName,
@@ -134,7 +126,6 @@ const ProductCardsSlide = () => {
   useEffect(() => {
     if (testRef.current) {
       setTestWidth(testRef.current.offsetWidth);
-      //   console.log(testRef.current.offsetWidth);
     }
   }, [currentSlide]);
 
@@ -203,8 +194,6 @@ const ProductCardsSlide = () => {
         >
           {productCards.map((card, index) => {
             const firstImageId = card[0][0].id;
-            // console.log(card[0]);
-
             const productImages = card[0].filter((imageData) =>
               imageData.id.endsWith("01")
             );
@@ -240,12 +229,8 @@ const ProductCardsSlide = () => {
 
                   <p>{card[2]}</p>
                   <p className="text-gray-400">{card[3]}</p>
-                  {/* <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
-                  </div> */}
                   <div className="flex flex-row flex-nowrap space-x-1  overflow-x-scroll overflow-y-hidden">
                     {productImages.map((productImage, eventIndex) => {
-                      // console.log(productImage.name);
                       return (
                         <img
                           src={productImage.image}

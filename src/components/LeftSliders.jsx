@@ -101,20 +101,8 @@ const LeftSliders = () => {
           <div
             className="relative group pointer-events-none lg:pointer-events-auto flex w-full h-full  hover:translate-x-1 duration-500 overflow-hidden"
             onClick={openModal}
-            // onMouseDown={handleMouseDown}
-            // onMouseMove={handleMouseMove}
-            // onMouseUp={handleMouseUp}
-
             onDragStart={(e) => e.preventDefault()}
-            // ref={slideRef}
           >
-            {/* <div className="w-full h-full overflow-hidden">  */}
-            {/* <img
-            src={greyShoesImages[currentImageIndex]}
-            alt="Current"
-            style={{ imageStyle }}
-            className="object-cover block shrink-0 grow-0 w-full h-auto bg-gray-100 transition-translate duration-700 ease-in-out hover:scale-105"
-          /> */}
             {currentImageSet.map((image, index) => {
               if (image.endsWith(".mp4")) {
                 // Render the video
@@ -122,10 +110,6 @@ const LeftSliders = () => {
                   <video
                     key={index}
                     src={image}
-                    // style={{
-                    //   ...imageStyle,
-                    //   display: currentImageIndex === index ? "block" : "none",
-                    // }}
                     style={imageStyle}
                     playsInline
                     autoPlay
@@ -157,13 +141,8 @@ const LeftSliders = () => {
         </div>
       </div>
 
-      {/* <div className="w-[10%] md:hidden">
-        <SmallImgIcons />
-      </div> */}
-
       {isModalOpen && (
         <div
-          //   style={modalStyle}
           className={`bg-black bg-opacity-70 fixed inset-0 z-[999] ${
             isModalOpen ? " translate-y-0" : "-translate-y-full"
           }transition-transform duration-500 ease-in-out`}
@@ -195,11 +174,6 @@ const LeftSliders = () => {
             </div>
 
             <div>
-              {/* <img
-                src={greyShoesImages[currentImageIndex]}
-                alt="Enlarged Image"
-                className="w-[60vw] max-h-[90vh] object-cover"
-              /> */}
               <div className="grid place-items-center overflow-hidden">
                 <div className="flex w-[60vw] max-h-[90vh] hover:scale-110 duration-300 overflow-hidden">
                   {currentImageSet.map((image, index) => {
@@ -209,10 +183,6 @@ const LeftSliders = () => {
                         <video
                           key={index}
                           src={image}
-                          // style={{
-                          //   ...imageStyle,
-                          //   display: currentImageIndex === index ? "block" : "none",
-                          // }}
                           style={imageStyle}
                           autoPlay
                           playsInline

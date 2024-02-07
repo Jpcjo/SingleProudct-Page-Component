@@ -28,16 +28,6 @@ const TopSlide = () => {
     };
   }, [direction]);
 
-  //   useEffect(() => {
-  //     const slideTimer = setInterval(() => {
-  //       setCurrentSlide((prevSlide) => (prevSlide + 1) % texts.length);
-  //     }, 4500);
-
-  //     return () => {
-  //       clearInterval(slideTimer);
-  //     };
-  //   }, []);
-
   return (
     <div className="relative w-screen  h-12 bg-black text-white overflow-hidden font-semibold uppercase ">
       <div

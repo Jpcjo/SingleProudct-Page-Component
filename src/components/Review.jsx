@@ -13,9 +13,7 @@ const Review = () => {
   const [isCurrentPageClicked, setIsCurrentPageClicked] = useState(false);
   console.log(isCurrentPageClicked);
   const [searchQuery, setSearchQuery] = useState("");
-  //   console.log(searchQuery);
   const [filteredReviews, setFilteredReviews] = useState([]);
-  //   console.log(Math.ceil(filteredReviews.length / ReviewsPerPage));
   const [searchExecuted, setSearchExecuted] = useState(false);
   const [review, setReview] = useState(reviews);
   const [sortingCriteria, setSortingCriteria] = useState("highest-rated");
@@ -36,7 +34,6 @@ const Review = () => {
         review.description.toLowerCase().includes(lowerSearchQuery)
     );
 
-    // console.log(filtered);
     const filteredSpread = [...filtered];
 
     if (sortingCriteria === "highest-rated") {
@@ -76,7 +73,6 @@ const Review = () => {
     setFilteredReviews(simpleFilter);
     setIsSearchButtonClickInvoked(false);
     setIsSearchButtonClickInvoked(false);
-
     // setReview(reviews); // Reset reviews to the original set
   };
 
@@ -115,7 +111,6 @@ const Review = () => {
     } else if (criteria === "oldest") {
       filteredResults.sort((a, b) => a.dateSelect - b.dateSelect);
     }
-    // console.log(filteredResults);
 
     setFilteredReviews(filteredResults);
     setSortChangeInvoked(true);
@@ -165,11 +160,6 @@ const Review = () => {
               placeholder="Search..."
               className="px-3 py-2 bg-gray-100 w-[200px] sm:w-[300px] h-[40px] focus:outline-none   focus:ring-gray-700"
               value={searchQuery}
-              // style={{
-              //   appearance: "none",
-              //   WebkitAppearance: "none",
-              //   MozAppearance: "none",
-              // }}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
 
@@ -272,7 +262,6 @@ const Review = () => {
           <button
             onClick={() => {
               handlePrevious();
-              // scrollToTopOfReviews();
             }}
             disabled={currentPage === 1}
             className="mr-2 px-4 py-2 hover:scale-1 duration-300"
@@ -284,7 +273,6 @@ const Review = () => {
               key={index}
               onClick={() => {
                 setCurrentPage(index + 1);
-                // scrollToTopOfReviews();
                 setIsCurrentPageClicked(true);
               }}
               className={`px-3 py-2 hover:scale-150 duration-300 ${
@@ -297,7 +285,6 @@ const Review = () => {
           <button
             onClick={() => {
               handleNext();
-              // scrollToTopOfReviews();
             }}
             disabled={currentPage === totalPages}
             className="ml-2 px-4 py-2 hover:scale-150 duration-300 "
