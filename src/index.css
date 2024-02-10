@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #ffffff; /* Set your desired background color */
+}
+
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
